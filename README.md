@@ -29,8 +29,8 @@ Application: JavaScript and jQuery-3.3.1
 | ------------- |-------------   |
 | 123           | 123            |
 | i             | iay            |
-| always        | alwaysway      |
-| pig latin     | igpay atinlay  |
+| apple         | appleway       |
+| steak         | eakstay        |
 | squeal        | ealsquay       |
 | yesterday     | esterdayyay    |
 

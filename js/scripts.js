@@ -1,27 +1,42 @@
 // Business logic
+
+// Translator will take a word input as a string, translate it to pig latin, and return the translated word
+// @parameter = string
+// @return = string
 var translator = function(string){
   var splitArrays = string.split("");
-  if(splitArrays.length === 1 && isVowel(splitArrays[0])) {
+
+  if(!isAlpha(splitArrays[0])){
+    // check if it's an alphabet character
+    return string;
+  } else if(splitArrays.length === 1 && isVowel(splitArrays[0])) {
+    // check if the string is a single character and if it's a vowel
     splitArrays.push("ay");
-    return joinString(splitArrays);
+    return makeString(splitArrays);
   } else if(isVowel(splitArrays[0])) {
+    // check if the string start with a vowel
     splitArrays.push("way");
-    return  joinString(splitArrays);
-  } else if(!isVowel(splitArrays[0])){
+    return  makeString(splitArrays);
+  } else {
+    // else it's a consonant
     var count = consonantCount(splitArrays);
     var consonantString = "";
     if(splitArrays[count].toUpperCase() === "U" && splitArrays[count-1].toUpperCase() === "Q"){
-      consonantString = joinString(splitArrays.splice(0,(count+1)));
+      //check for the special case of q follow by u
+      consonantString = makeString(splitArrays.splice(0,(count+1)));
     } else {
-      consonantString = joinString(splitArrays.splice(0,count));
+      consonantString = makeString(splitArrays.splice(0,count));
     };
     splitArrays.push(consonantString + "ay");
-    return joinString(splitArrays);
-  }
-  return string;
+    return makeString(splitArrays);
+  };
+
 };
 
-var joinString = function(stringArray){
+// makeString will take in an array and return a string
+// @parameter array
+// @return string
+var makeString = function(stringArray){
   var string = "";
   for (i = 0; i < stringArray.length; i += 1){
     string = string.concat(stringArray[i]);
@@ -29,6 +44,9 @@ var joinString = function(stringArray){
   return string;
 };
 
+// isVowel will take a char and check to see if it's a, e, i, o, or u
+// @paremeter characters
+// @return true or false
 var isVowel = function(char){
   if( char.toUpperCase() ==="A" || char.toUpperCase() ==="E" || char.toUpperCase() ==="I" || char.toUpperCase() ==="O" || char.toUpperCase() ==="U"){
     return true;
@@ -37,6 +55,9 @@ var isVowel = function(char){
   };
 };
 
+// consonantCount will count the number of consonants in the string from the beginning to the first vowel
+// @parameter array
+// @return integer
 var consonantCount = function(myArray){
   var count = 0;
   for(var i = 0; i < myArray.length; i+=1){
@@ -48,6 +69,13 @@ var consonantCount = function(myArray){
   };
   return count;
 };
+
+// isAlpha will take an input and return if it's an alphabet character or not
+// @parameter characters
+// @return true or false
+const isAlpha = ch => {
+	return ch.match(/^[a-z]+$/i) !== null;
+}
 
 
 
