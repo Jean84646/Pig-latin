@@ -106,7 +106,9 @@ $(document).ready(function() {
     var userInput = $("input#user-input").val();
 
   var output = translator(userInput);
+  $("#output-area").fadeIn();
   $("#user-output").text(output);
+
   });
 
 

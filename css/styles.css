@@ -1,0 +1,35 @@
+body {
+  background: url('../img/Pig.jpg');
+  background-size: cover;
+  color: 	#9b4d18;
+  font-family: skia;
+  font-weight: bolder;
+  font-size: 35px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 65px;
+}
+
+.button {
+  background: rgba(0,0,0,0.1);
+  border: pink;
+  border-style: solid;
+  border-radius: 7em;
+  color: pink;
+  font-size: 55px;
+}
+
+.button:hover {
+  color: black;
+  background: pink;
+}
+
+
+
+#output-area {
+  display: none;
+  color: #f2d6c4;
+  font-size: 55px;
+}
