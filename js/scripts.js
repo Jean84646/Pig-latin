@@ -1,9 +1,26 @@
 // Business logic
 
-// Translator will take a word input as a string, translate it to pig latin, and return the translated word
+// translator will take a word input as a string, translate it to pig latin, and return the translated word
 // @parameter = string
 // @return = string
 var translator = function(string){
+  var splitArrays = string.split(" ");
+  var string = "";
+  var translatedArrays = splitArrays.map(function(word){
+    return translateWord(word);
+  });
+  // return makeString(translatedArrays);
+
+  for (i = 0; i < translatedArrays.length; i += 1){
+    string = string.concat(translatedArrays[i] + " ");
+  };
+  return string;
+};
+
+// translateWord will take a word input as a string, translate it to pig latin, and return the translated word
+// @parameter = string
+// @return = string
+var translateWord = function(string){
   var splitArrays = string.split("");
 
   if(!isAlpha(splitArrays[0])){
