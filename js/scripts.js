@@ -1,7 +1,7 @@
 // Business logic
 var translator = function(string){
   var splitArrays = string.split("");
-  if(splitArrays.length === 1 && splitArrays[0].toUpperCase() ==="A" || splitArrays[0].toUpperCase() ==="E" || splitArrays[0].toUpperCase() ==="I" || splitArrays[0].toUpperCase() ==="O" || splitArrays[0].toUpperCase() ==="U") {
+  if(splitArrays.length === 1 && isVowel(splitArrays[0])) {
     splitArrays.push("ay");
     return joinString(splitArrays);
   }
@@ -16,8 +16,13 @@ var joinString = function(stringArray){
   return string;
 }
 
-
-
+var isVowel = function(char){
+  if( char.toUpperCase() ==="A" || char.toUpperCase() ==="E" || char.toUpperCase() ==="I" || char.toUpperCase() ==="O" || char.toUpperCase() ==="U"){
+    return true;
+  } else {
+    return false;
+  };
+};
 
 
 
