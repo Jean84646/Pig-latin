@@ -2,7 +2,7 @@
 
 ##### A little program that translate English to Pig-Latin.
 
-#### By Anousone Kaseumsouk and Lan Dam
+#### By Anousone Kaseumsouk,Lan Dam, and Jean Jia
 
 ## Description
 
@@ -37,6 +37,6 @@ Application: JavaScript and jQuery-3.3.1
 
 ### Legal
 
-Copyright (c) 2018 **Anousone Kaseumsouk & Lan Dam**
+Copyright (c) 2018 **Anousone Kaseumsouk,Lan Dam, and Jean Jia**
 
 This software is licensed under the MIT license.
