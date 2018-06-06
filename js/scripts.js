@@ -18,8 +18,8 @@ var translator = function(string){
   var translatedArrays = splitArrays.map(function(word){
     return translateWord(word);
   });
-  // return makeString(translatedArrays);
 
+  // loop through the array and concatenate them into a string using space as separator
   for (i = 0; i < translatedArrays.length; i += 1){
     string = string.concat(translatedArrays[i] + " ");
   };
