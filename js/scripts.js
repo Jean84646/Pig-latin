@@ -4,6 +4,9 @@ var translator = function(string){
   if(splitArrays.length === 1 && isVowel(splitArrays[0])) {
     splitArrays.push("ay");
     return joinString(splitArrays);
+  } else if(isVowel(splitArrays[0])) {
+    splitArrays.push("way");
+    return  joinString(splitArrays);
   }
   return string;
 };
