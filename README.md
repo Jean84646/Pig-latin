@@ -23,11 +23,11 @@ Application: JavaScript and jQuery-3.3.1
 * If the first consonants include "qu", move the "u" along with the "q". Don't forget about words like "squeal" where "qu" doesn't come first!
 * For words beginning with "y", treat "y" as a consonant.
 
-Input:                    Expected Output:
-always                    alwaysway
-pig latin                 igpay atinlay
-squeal                    ealsquay
-yesterday                 esterdayyay
+* Input:                    Expected Output:
+* always                    alwaysway
+* pig latin                 igpay atinlay
+* squeal                    ealsquay
+* yesterday                 esterdayyay
 
 ### Legal
 
