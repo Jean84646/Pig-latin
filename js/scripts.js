@@ -7,6 +7,11 @@ var translator = function(string){
   } else if(isVowel(splitArrays[0])) {
     splitArrays.push("way");
     return  joinString(splitArrays);
+  } else if(!isVowel(splitArrays[0])){
+    var count = consonantCount(splitArrays);
+    var consonantString = joinString(splitArrays.splice(0,count));
+    splitArrays.push(consonantString + "ay");
+    return joinString(splitArrays);
   }
   return string;
 };
@@ -26,6 +31,18 @@ var isVowel = function(char){
     return false;
   };
 };
+
+var consonantCount = function(myArray){
+  var count = 0;
+  for(var i = 0; i < myArray.length; i+=1){
+    if(!isVowel(myArray[i])){
+      count += 1;
+    } else{
+      return count;
+    };
+  }
+  return count;
+}
 
 
 
