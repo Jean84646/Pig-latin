@@ -28,9 +28,24 @@ h1 {
 }
 
 
+input:hover {
+  background: pink;
+  border-style: solid;
+  border-radius: 7em;
+}
+
+input:focus {
+  border-style: solid;
+  border-radius: 7em;
+}
 
 #output-area {
   display: none;
   color: #f2d6c4;
   font-size: 55px;
+  border-style: solid;
+  border-color: pink;
+  border-radius: 7em;
+  margin-top: 50px;
+  padding: 25px;
 }
