@@ -6,6 +6,15 @@
 var translator = function(string){
   var splitArrays = string.split(" ");
   var string = "";
+
+  for(i = 0; i < splitArrays.length; i += 1){
+debugger;
+    if(splitArrays[i] === undefined || splitArrays[i] === null || splitArrays[i] === "" || splitArrays[i] === " "){
+      splitArrays.splice(i,1);
+      i -= 1;
+    }
+  };
+
   var translatedArrays = splitArrays.map(function(word){
     return translateWord(word);
   });
@@ -94,7 +103,9 @@ const isAlpha = ch => {
 	return ch.match(/^[a-z]+$/i) !== null;
 }
 
-
+const isAlphaNumeric = ch => {
+	return ch.match(/^[a-z0-9]+$/i) !== null;
+}
 
 
 

@@ -1,5 +1,6 @@
 body {
   background: url('../img/Pig.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
   color: 	#9b4d18;
   font-family: skia;
