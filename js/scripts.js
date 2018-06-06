@@ -3,7 +3,7 @@ $(document).ready(function() {
     event.preventDefault();
     var userInput = $("input#user-input").val();
 
-    console.log(userInput);
+
   });
 
 
