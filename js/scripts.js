@@ -9,7 +9,12 @@ var translator = function(string){
     return  joinString(splitArrays);
   } else if(!isVowel(splitArrays[0])){
     var count = consonantCount(splitArrays);
-    var consonantString = joinString(splitArrays.splice(0,count));
+    var consonantString = "";
+    if(splitArrays[count].toUpperCase() === "U" && splitArrays[count-1].toUpperCase() === "Q"){
+      consonantString = joinString(splitArrays.splice(0,(count+1)));
+    } else {
+      consonantString = joinString(splitArrays.splice(0,count));
+    };
     splitArrays.push(consonantString + "ay");
     return joinString(splitArrays);
   }
@@ -20,9 +25,9 @@ var joinString = function(stringArray){
   var string = "";
   for (i = 0; i < stringArray.length; i += 1){
     string = string.concat(stringArray[i]);
-  }
+  };
   return string;
-}
+};
 
 var isVowel = function(char){
   if( char.toUpperCase() ==="A" || char.toUpperCase() ==="E" || char.toUpperCase() ==="I" || char.toUpperCase() ==="O" || char.toUpperCase() ==="U"){
@@ -40,9 +45,9 @@ var consonantCount = function(myArray){
     } else{
       return count;
     };
-  }
+  };
   return count;
-}
+};
 
 
 
