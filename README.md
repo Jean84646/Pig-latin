@@ -18,6 +18,8 @@ Application: JavaScript and jQuery-3.3.1
 
 ## Spec
 
+* The application does nothing to non-alphabetical characters, since they do not contain consonant or vowel.
+* The program adds "ay" to single-letter words beginning with a vowel.
 * For words beginning with a vowel, add "way" to the end.
 * For words beginning with one or more consonants, move all of the first consecutive constants to the end, and add "ay".
 * If the first consonants include "qu", move the "u" along with the "q". Don't forget about words like "squeal" where "qu" doesn't come first!
@@ -25,6 +27,8 @@ Application: JavaScript and jQuery-3.3.1
 
 | Input         | Expected Output|
 | ------------- |-------------   |
+| 123           | 123            |
+| i             | iay            |
 | always        | alwaysway      |
 | pig latin     | igpay atinlay  |
 | squeal        | ealsquay       |
