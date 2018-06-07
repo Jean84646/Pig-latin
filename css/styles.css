@@ -27,6 +27,9 @@ h1 {
   background: pink;
 }
 
+.form-control {
+  border-radius: 7em;
+}
 
 input:hover {
   background: pink;
